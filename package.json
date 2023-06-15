@@ -9,6 +9,7 @@
     "build:lib": "ng build irm-dff",
     "build:showcase": "ng build irm-showcase --base-href='https://SubeshIRM.github.io/irm-dff/'",
     "watch": "ng build --watch --configuration development",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/irm-showcase",
     "test": "ng test"
   },
   "private": true,
