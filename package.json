@@ -6,7 +6,7 @@
     "copy:readme": "copyfiles ./README.md ./projects/irm-dff",
     "start": "ng serve",
     "build": "npm run build:lib && npm run build:showcase",
-    "build:lib": "npm run copy:readme && ng build irm-dff",
+    "build:lib": "ng build irm-dff",
     "build:showcase": "npm build irm-showcase --base-href='https://SubeshIRM.github.io/irm-dff/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
