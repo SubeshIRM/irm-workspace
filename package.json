@@ -5,10 +5,11 @@
     "ng": "ng",
     "copy:readme": "copyfiles ./README.md ./projects/irm-dff",
     "start": "ng serve",
-    "build": "npm run build:lib && npm run build:showcase",
+    "build": "npm run build:lib && npm run pack && npm run build:showcase",
     "build:lib": "ng build irm-dff",
     "build:showcase": "ng build irm-showcase --base-href='https://SubeshIRM.github.io/irm-dff/'",
     "watch": "ng build --watch --configuration development",
+    "pack": "npm pack --dir=./dist/irm-dff/",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/irm-showcase",
     "test": "ng test"
   },
