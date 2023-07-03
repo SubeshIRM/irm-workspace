@@ -28,4 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.Token }}
-          publish_dir: ./storybook-static
+          publish_dir: /home/runner/work/irm-workspace/irm-workspace/dist/storybook/irm-dff
