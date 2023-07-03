@@ -1,0 +1,53 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build:lib
+
+      - name: Pack
+        run: npm run pack
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v1.0.0 # Specify the tag for the release
+          release_name: Release v1.0.0 # Specify the name of the release
+          body: |
+            Release Notes:
+            - Add new feature A
+            - Fix bug B
+          draft: false # Set to 'true' if you want to create a draft release
+          prerelease: false # Set to 'true' if this is a pre-release
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./path/to/your/asset.zip # Replace with the path to your release asset
+          asset_name: asset.zip # Specify the name of the release asset
+          asset_content_type: application/zip # Specify the content type of the release asset
