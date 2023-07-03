@@ -1,6 +1,10 @@
 {
   "name": "irm-workspace",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repo"
+  },
   "scripts": {
     "ng": "ng",
     "copy:readme": "copyfiles ./README.md ./projects/irm-dff",
