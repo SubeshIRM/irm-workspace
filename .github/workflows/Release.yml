@@ -48,6 +48,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./path/to/your/asset.zip # Replace with the path to your release asset
-          asset_name: asset.zip # Specify the name of the release asset
+          asset_path: ./dist/irm-dff/irm-dff-0.0.1.tgz # Replace with the path to your release asset
+          asset_name: irm-dff-0.0.1.tgz # Specify the name of the release asset
           asset_content_type: application/zip # Specify the content type of the release asset
