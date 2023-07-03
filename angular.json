@@ -31,6 +31,36 @@
             "tsConfig": "projects/irm-dff/tsconfig.spec.json",
             "karmaConfig": "projects/irm-dff/karma.conf.js"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/irm-dff/.storybook",
+            "browserTarget": "irm-dff:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/irm-dff"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/irm-dff/.storybook",
+            "browserTarget": "irm-dff:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/irm-dff"
+            ],
+            "outputDir": "dist/storybook/irm-dff"
+          }
         }
       }
     },
@@ -130,6 +160,36 @@
               "projects/irm-showcase/src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/irm-showcase/.storybook",
+            "browserTarget": "irm-showcase:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/irm-showcase"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/irm-showcase/.storybook",
+            "browserTarget": "irm-showcase:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/irm-showcase"
+            ],
+            "outputDir": "dist/storybook/irm-showcase"
           }
         }
       }

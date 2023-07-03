@@ -11,6 +11,7 @@
     "watch": "ng build --watch --configuration development",
     "pack": "cd ./dist/irm-dff && npm pack",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/irm-showcase",
+    "build-storybook": "ng run irm-dff:build-storybook",
     "test": "ng test"
   },
   "private": true,
@@ -31,6 +32,13 @@
     "@angular-devkit/build-angular": "^14.2.11",
     "@angular/cli": "~14.2.8",
     "@angular/compiler-cli": "^14.2.0",
+    "@compodoc/compodoc": "^1.1.21",
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/angular": "^7.0.24",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
@@ -39,6 +47,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "ng-packagr": "^14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.24",
     "typescript": "~4.7.2"
   }
 }
