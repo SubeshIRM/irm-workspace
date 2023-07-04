@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo"
+    "url": "https://github.com/SubeshIRM/irm-workspace"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "ng": "ng",
