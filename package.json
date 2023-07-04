@@ -6,7 +6,7 @@
     "url": "https://github.com/SubeshIRM/irm-workspace"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/SubeshIRM/irm-workspace"
   },
   "scripts": {
     "ng": "ng",
