@@ -31,5 +31,6 @@ jobs:
 
       - name: Publish to GitHub Packages
         run: |
-          echo "//npm.pkg.github.com/:_authToken=\${{ secrets.Token }}" >> .npmrc
-          npm publish --access public
+          echo "@subeshirm:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "//npm.pkg.github.com//:_authToken=\${{ secrets.Token }}" >> .npmrc
+          npm publish --access restricted
