@@ -8,6 +8,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/SubeshIRM/irm-workspace"
   },
+  "private": "true",
   "scripts": {
     "ng": "ng",
     "copy:readme": "copyfiles ./README.md ./projects/irm-dff",
